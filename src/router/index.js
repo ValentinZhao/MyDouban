@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomeView from '@/components/HomeView'
-import PagesView from '@/components/PagesView'
+import HomeView from '@/views/HomeView'
+import PagesView from '@/views/PagesView'
 
 Vue.use(Router)
 
