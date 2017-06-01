@@ -43,7 +43,7 @@ const action = {
   getSingleEvent ({commit, state}, payload) {
     return new Promise((resolve, reject) => {
       Vue.http.jsonp('https://api.douban.com/v2/event/' + payload.id)
-              .then(res => {
+              .then(res => { // 这个res指的是jsonp请求返回的response
                 commit({
                   type: 'getSingleEvent',
                   res: res.body
@@ -52,4 +52,10 @@ const action = {
               })
     })
   }
+}
+
+export default {
+  state,
+  mutation,
+  action
 }
