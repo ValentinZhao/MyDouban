@@ -7,5 +7,27 @@
 </template>
 
 <script>
+import HeaderBar from '@/components/HeaderBar'
+import TalionView from '@/components/TalionView'
 
+export default {
+  name: 'pages-view',
+  components: { HeaderBar, TalionView },
+  data () {
+    return {
+      talion: ''
+    }
+  },
+  methods: {
+    open: function () {
+      this.talion = 'open'
+    },
+    close: function () {
+      this.talion = ''
+    }
+  }
+}
 </script>
+
+<style scoped>
+</style>

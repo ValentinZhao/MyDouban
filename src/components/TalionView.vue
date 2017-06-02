@@ -8,8 +8,8 @@
           name="query"
           v-model.trim.lazy="queryStr"
           @keyup.enter="goSearch()">
-        </form>
-      </div>
+      </form>
+    </div>
       <ul class="has-header">
         <li>
           <div>
@@ -30,6 +30,7 @@
               <span>心爱之物</span>
             </a>
           </div>
+        </li>
         <li>
           <div>
             <a href="#" target="_blank">
@@ -71,15 +72,16 @@
           </div>
         </li>
       </ul>
-    </div>
     <sub-nav mold="navBottom"></sub-nav>
   </div>
 </template>
 
 <script>
+import SubNav from '@/components/SubNav'
+
 export default {
-  name: "talion-view",
-  components: {},
+  name: 'talion-view',
+  components: { SubNav },
   data () {
     return {
       queryStr: ''
@@ -96,6 +98,6 @@ export default {
 }
 </script>
 
-<style lng="scss" scoped>
+<style scoped>
 
 </style>
